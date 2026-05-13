@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "DailyShare",
+    "slug": "daily-share",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "scheme": "dailyshare",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.dailyshare.app",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "사진을 게시물에 첨부하기 위해 사진 라이브러리에 접근합니다.",
+        "NSCameraUsageDescription": "게시물에 사진을 촬영하기 위해 카메라에 접근합니다."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.dailyshare.app",
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "CAMERA",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE",
+        "POST_NOTIFICATIONS"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#ffffff"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "사진을 게시물에 첨부하기 위해 사진 라이브러리에 접근합니다.",
+          "cameraPermission": "게시물에 사진을 촬영하기 위해 카메라에 접근합니다."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
