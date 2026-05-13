@@ -39,13 +39,6 @@
     "plugins": [
       "expo-router",
       [
-        "expo-notifications",
-        {
-          "icon": "./assets/icon.png",
-          "color": "#ffffff"
-        }
-      ],
-      [
         "expo-image-picker",
         {
           "photosPermission": "사진을 게시물에 첨부하기 위해 사진 라이브러리에 접근합니다.",
