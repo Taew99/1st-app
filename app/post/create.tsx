@@ -19,7 +19,6 @@ import { preparePostImages, uploadPostImages } from '@/lib/imageUpload';
 import { useAuthStore } from '@/stores/authStore';
 import { Button } from '@/components/ui/Button';
 import { LoadingSpinner } from '@/components/ui/LoadingSpinner';
-import crypto from 'expo-crypto';
 
 const MAX_BODY = 100;
 
@@ -58,7 +57,7 @@ export default function CreatePostScreen() {
 
     setIsUploading(true);
     try {
-      const postId = crypto.randomUUID();
+      const postId = globalThis.crypto.randomUUID();
       const { fullUri, thumbUri } = await preparePostImages(imageUri);
       const { imageUrl, thumbUrl } = await uploadPostImages(user.id, postId, fullUri, thumbUri);
 
